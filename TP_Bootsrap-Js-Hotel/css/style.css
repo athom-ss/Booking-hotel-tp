@@ -1,15 +1,15 @@
 body {
-    font-family: 'Roboto', sans-serif; /* Assure-toi d'avoir la police Roboto incluse */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('../image/arriere_plan.png'); /* Chemin vers l'image */
-    background-size: cover; /* Couvre toute la zone sans déformation */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Ne répète pas l'image */
-    background-attachment: fixed; /* L'arrière-plan reste fixe au scroll */
+    background-image: url('../image/arriere_plan.png');
+    background-size: cover; /* Couvre toute la zone */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
   
 .page-header {
@@ -19,7 +19,7 @@ body {
 }
   
 .page-header h1 {
-    font-size: 2rem; /* Ajuster la taille du titre */
+    font-size: 2rem;
     font-weight: bold;
 }
   
@@ -29,35 +29,33 @@ body {
 }
 
 .card-title.text-primary {
-    color: #000000 !important; /* Surcharge la couleur du titre du formulaire */
+    color: #000000 !important;
 }
   
 .card-title.text-danger {
-    color: #000000 !important; /* Surcharge la couleur du titre du récapitulatif */
+    color: #000000 !important;
 }
   
 .page-footer {
     background-color: rgba(240, 244, 195, 0.9); /* Ajout d'une opacité */
-    color: #558b2f; /* Couleur de texte plus foncée */
+    color: #558b2f;
     font-size: 0.85rem;
     margin-top: auto;
 }
   
-/* Styles pour les champs d'âge des enfants ajoutés dynamiquement */
 #childrenAges label {
-    font-weight: normal; /* Moins gras que les labels principaux */
+    font-weight: normal;
     margin-bottom: 8px;
 }
 #childrenAges input[type="number"] {
     display: inline-block;
-    width: auto; /* Laisser l'input reprendre sa taille normale */
-    margin-left: 5px; /* Petite marge entre label et input */
+    width: auto;
+    margin-left: 5px;
 }
   
-/* Ajustements pour les petits écrans si nécessaire */
 @media (max-width: 576px) {
     .input-group.mb-2.me-sm-2 {
-        margin-right: 0 !important; /* Supprimer la marge à droite sur très petit écran */
+        margin-right: 0 !important;
     }
 }
   
@@ -66,7 +64,7 @@ body {
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     padding: 32px 28px;
-    min-width: 300px; /* Ajusté légèrement pour les petits écrans */
+    min-width: 300px;
     width: 100%;
     box-sizing: border-box;
 }
