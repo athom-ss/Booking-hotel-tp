@@ -1,4 +1,3 @@
-// Initialisation des compteurs à zéro et mise à jour au chargement
 document.addEventListener('DOMContentLoaded', () => {
   reinitialiserFormulaire();
 });
@@ -7,10 +6,9 @@ function reinitialiserFormulaire() {
   document.getElementById('adultes').value = 0;
   document.getElementById('enfants').value = 0;
   document.getElementById('chambres').value = 0;
-  document.getElementById('agesEnfants').innerHTML = ''; // Supprime les champs d'âge
+  document.getElementById('agesEnfants').innerHTML = '';
   document.getElementById('voyageTravail').checked = false;
-  document.getElementById('erreurFormulaire').textContent = ''; // Vide les messages d'erreur
-  // Réinitialiser les champs text et date manuellement
+  document.getElementById('erreurFormulaire').textContent = '';
   document.getElementById('lieu').value = '';
   document.getElementById('dateArrivee').value = '';
   document.getElementById('dateDepart').value = '';
@@ -19,7 +17,7 @@ function reinitialiserFormulaire() {
   document.getElementById('carteRecap').classList.add('d-none');
 }
 
-// Gestion des boutons +/-
+// Boutons +/-
 document.querySelectorAll('.ajouter, .soustraire').forEach(bouton => {
   bouton.addEventListener('click', function(event) {
     const boutonClique = event.target;
@@ -110,7 +108,7 @@ document.getElementById('formulaireReservation').addEventListener('submit', func
   const divErreur = document.getElementById('erreurFormulaire');
   divErreur.textContent = '';
 
-  // Vérification des dates et utilisation de new pour crééer un objet date pour ensuite comparer les dates
+  // Vérification des dates et utilisation de new pour créer un objet date pour ensuite comparer les dates
   if (dateArrivee && dateDepart && new Date(dateArrivee) >= new Date(dateDepart)) {
     divErreur.textContent = "La date d'arrivée doit être antérieure à la date de départ.";
     return;
@@ -130,7 +128,7 @@ document.getElementById('formulaireReservation').addEventListener('submit', func
     }
   }
 
-  // Si tout est rempli et correct, affichage du récap
+  // Si tout est rempli et correct, affichage du récapitulatif
   mettreAJourRecapitulatif();
   document.getElementById('carteRecap').classList.remove('d-none');
   alert('Réservation validée !');
